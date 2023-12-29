@@ -26,7 +26,7 @@ const About = () => {
               cum, quidem iure autem eum voluptates harum incidunt id blanditiis
               earum optio doloribus praesentium, laborum amet assumenda, eius
               quisquam temporibus inventore. Nisi accusamus odit adipisci,
-              provident mollitia nobis natus. Reiciendis veniam facere rem!
+              provident mollitia nobis natus. Reiciendis veniam facere rem! sss
             </p>
           </div>
         </div>

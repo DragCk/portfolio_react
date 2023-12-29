@@ -2,6 +2,7 @@ import { useState } from "react";
 import SocialIcon from "./SocialIcon";
 import Logo from "./Logo";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -9,17 +10,7 @@ const Navbar = () => {
   const handleNavChange = () => setNav(!nav);
 
   return (
-    <div
-      className="fixed 
-    w-full h-[80px] 
-    flex 
-    justify-between 
-    items-center 
-    px-4
-     bg-[#08192F]
-     text-gray-300
-    "
-    >
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#08192F] text-gray-300">
       {/* ======Logo======*/}
       <div>
         <Logo />
@@ -27,11 +18,31 @@ const Navbar = () => {
 
       {/* ======Menu======*/}
       <ul className="hidden md:flex">
-        <li>Home</li>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Project</li>
-        <li>Contact</li>
+        <li>
+          <Link to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to="work" smooth={true} duration={500}>
+            Project
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* ======hamburger======*/}
@@ -47,11 +58,56 @@ const Navbar = () => {
             : "hidden"
         }
       >
-        <li className="py-6 text-4xl">Home</li>
-        <li className="py-6 text-4xl">About</li>
-        <li className="py-6 text-4xl">Skills</li>
-        <li className="py-6 text-4xl">Project</li>
-        <li className="py-6 text-4xl">Contact</li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavChange}
+            to="home"
+            smooth={true}
+            duration={500}
+          >
+            Home
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavChange}
+            to="about"
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavChange}
+            to="skills"
+            smooth={true}
+            duration={500}
+          >
+            Skills
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavChange}
+            to="work"
+            smooth={true}
+            duration={500}
+          >
+            Project
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleNavChange}
+            to="contact"
+            smooth={true}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* ======Social icons======*/}
